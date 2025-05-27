@@ -68,12 +68,10 @@ public class MateriaDialog extends JDialog {
 
     public Materia getMateria() {
         if (materia == null) {
-            // Nueva materia - el ID se asignará al guardar
             return new Materia(0, idAlumno, nombreField.getText(),
                     (double) calificacionSpinner.getValue(),
                     (int) cuatrimestreSpinner.getValue());
         } else {
-            // Materia existente - mantener el mismo ID y idAlumno
             return new Materia(materia.getId(), idAlumno, nombreField.getText(),
                     (double) calificacionSpinner.getValue(),
                     (int) cuatrimestreSpinner.getValue());

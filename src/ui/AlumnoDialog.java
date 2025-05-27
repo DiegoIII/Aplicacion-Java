@@ -66,10 +66,8 @@ public class AlumnoDialog extends JDialog {
 
     public Alumno getAlumno() {
         if (alumno == null) {
-            // Nuevo alumno - el ID se asignará al guardar
             return new Alumno(0, nombreField.getText(), apellidoField.getText(), (int) edadSpinner.getValue());
         } else {
-            // Alumno existente - mantener el mismo ID
             return new Alumno(alumno.getId(), nombreField.getText(), apellidoField.getText(),
                     (int) edadSpinner.getValue());
         }
